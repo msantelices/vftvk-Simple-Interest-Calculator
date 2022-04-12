@@ -1,16 +1,51 @@
-<html>
-    <head>
-    <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+    <title>Web App - Simple Interest Calculator</title>
+</head>
+<body>
+    <main class="main-container">
         <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+        <form class="inner-container">
+            <div class="form-row">
+                <p>Amount</p>
+                <input type="number" id="principal">
+            </div>
+            <div class="form-row">
+                <p>Interest Rate</p>
+                <input type="range" id="rate" min="1" max="20" step="0.25" value="10.25">
+                <span id="rate-val">10.25%</span>
+            </div>
+            <div class="form-row">
+                <p>No. of Years</p>
+                <select id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <button id="compute-btn">Compute Interest</button>
+            </div>
 
-        <button onclick="compute()">Compute</button>
-    </body>
+            <p id="result" class="result-output"></p>
+        </form>
+
+
+        <footer>
+            <p>&#169; Everyone Can Get Rich</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </main>
+</body>
 </html>
